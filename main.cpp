@@ -17,7 +17,7 @@ struct Song
     double instrumentality = 0;
     double key = 0; //NOT USED
     double livelihood = 0;
-    double loudness = 1;
+    double loudness = 0;
     int mode = 0; // NOT USED
     double speechiness = 0; // DONT USE IF YOU DONT WANT TO
     double tempo = 0;
