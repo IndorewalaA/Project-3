@@ -32,8 +32,6 @@ int main() {
         cout << "File not open! Exiting program..." << endl;
         return 0;
     }
-    // isrc,acousticness,danceability,duration_ms,energy,instrumentalness,key,liveness,loudness,mode,speechiness,
-    // tempo,time_signature,valence,updated_on
 
     string header;
     getline(input, header);
@@ -74,6 +72,35 @@ int main() {
         songList.push_back(song);
     }
 
-    cout << songList.size() << endl;
+    bool runMenu = true;
+    bool error;
+    int menuOption = -1;
+    cout << "Welcome to the Song Search Filter!" << endl;
+    while (runMenu) {
+        cout << endl;
+        cout << "Select an action:" << endl;
+        cout << "0. Exit Program" << endl;
+        cout << "1. Filter Information" << endl;
+        cout << "2. Search" << endl;
+        string temp;
+        cin >> temp;
+        try {
+            menuOption = stoi(temp);
+        }
+        catch(...) {
+            cout << "Error! Not a valid number!" << endl;
+            error = true;
+
+        }
+        if (!error) {
+            if ((menuOption > 2) || (menuOption < 0)) {
+                cout << "Enter a number between 0 and 2!" << endl;
+            }
+            else {
+                runMenu = false;
+            }
+        }
+        error = false;
+    }
     return 0;
 }
