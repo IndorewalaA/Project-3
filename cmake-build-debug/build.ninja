@@ -57,6 +57,14 @@ build CMakeFiles/Project_3.dir/main.cpp.obj: CXX_COMPILER__Project_3_Debug C$:/U
   TARGET_COMPILE_PDB = CMakeFiles\Project_3.dir\
   TARGET_PDB = Project_3.pdb
 
+build CMakeFiles/Project_3.dir/SortingSSongs.cpp.obj: CXX_COMPILER__Project_3_Debug C$:/Users/abdul/OneDrive/Desktop/University/Spring$ 2024/COP3530$ -$ Data$ Structures$ and$ Algorithms/Projects/Project$ 3/Project-3/SortingSSongs.cpp || cmake_object_order_depends_target_Project_3
+  DEP_FILE = CMakeFiles\Project_3.dir\SortingSSongs.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  OBJECT_DIR = CMakeFiles\Project_3.dir
+  OBJECT_FILE_DIR = CMakeFiles\Project_3.dir
+  TARGET_COMPILE_PDB = CMakeFiles\Project_3.dir\
+  TARGET_PDB = Project_3.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target Project_3
@@ -65,7 +73,7 @@ build CMakeFiles/Project_3.dir/main.cpp.obj: CXX_COMPILER__Project_3_Debug C$:/U
 #############################################
 # Link the executable Project_3.exe
 
-build Project_3.exe: CXX_EXECUTABLE_LINKER__Project_3_Debug CMakeFiles/Project_3.dir/main.cpp.obj
+build Project_3.exe: CXX_EXECUTABLE_LINKER__Project_3_Debug CMakeFiles/Project_3.dir/main.cpp.obj CMakeFiles/Project_3.dir/SortingSSongs.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Project_3.dir
