@@ -265,4 +265,23 @@ CMakeFiles/Project_3.dir/main.cpp.obj
  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h
  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_bvector.h
  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/vector.tcc
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/random
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath
+ C:/mingw/x86_64-w64-mingw32/include/math.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/pmmintrin.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/emmintrin.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/xmmintrin.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/mmintrin.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/mm_malloc.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.tcc
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/numeric
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_numeric.h
+ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ctime
+ C:/mingw/x86_64-w64-mingw32/include/time.h
+ C:/mingw/x86_64-w64-mingw32/include/_timeval.h
+ C:/mingw/x86_64-w64-mingw32/include/pthread_time.h
 

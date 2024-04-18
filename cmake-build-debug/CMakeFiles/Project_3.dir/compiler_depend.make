@@ -262,10 +262,31 @@ CMakeFiles/Project_3.dir/main.cpp.obj: C:/Users/phill/Desktop/DSA/Project-3/main
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_uninitialized.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_bvector.h \
-  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/vector.tcc
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/vector.tcc \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/random \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath \
+  C:/mingw/x86_64-w64-mingw32/include/math.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/pmmintrin.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/emmintrin.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/xmmintrin.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/mmintrin.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/mm_malloc.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.tcc \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/numeric \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_numeric.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ctime \
+  C:/mingw/x86_64-w64-mingw32/include/time.h \
+  C:/mingw/x86_64-w64-mingw32/include/_timeval.h \
+  C:/mingw/x86_64-w64-mingw32/include/pthread_time.h
 
 
 C:/Users/phill/Desktop/DSA/Project-3/SortingSSongs.cpp:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/emmintrin.h:
 
 C:/Users/phill/Desktop/DSA/Project-3/SortingSSongs.h:
 
@@ -321,6 +342,8 @@ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator_base_typ
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator_base_funcs.h:
 
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/numeric:
+
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_iterator.h:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/string_conversions.h:
@@ -356,6 +379,8 @@ C:/mingw/x86_64-w64-mingw32/include/_mingw.h:
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/tuple:
 
 C:/mingw/x86_64-w64-mingw32/include/_mingw_mac.h:
+
+C:/mingw/x86_64-w64-mingw32/include/_timeval.h:
 
 C:/mingw/x86_64-w64-mingw32/include/_mingw_secapi.h:
 
@@ -455,6 +480,8 @@ C:/mingw/x86_64-w64-mingw32/include/stdio.h:
 
 C:/mingw/x86_64-w64-mingw32/include/sec_api/stdio_s.h:
 
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/pmmintrin.h:
+
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/iosfwd:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cctype:
@@ -462,6 +489,8 @@ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cctype:
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/istream.tcc:
 
 C:/mingw/x86_64-w64-mingw32/include/ctype.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_numeric.h:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/ostream_insert.h:
 
@@ -494,6 +523,8 @@ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/basic_ios.h:
 C:/mingw/x86_64-w64-mingw32/include/pthread_unistd.h:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cstdlib:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/random:
 
 C:/mingw/x86_64-w64-mingw32/include/stdlib.h:
 
@@ -566,3 +597,29 @@ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/fstream.tcc:
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath:
+
+C:/mingw/x86_64-w64-mingw32/include/math.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/xmmintrin.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/mmintrin.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/mm_malloc.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.tcc:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ctime:
+
+C:/mingw/x86_64-w64-mingw32/include/time.h:
+
+C:/mingw/x86_64-w64-mingw32/include/pthread_time.h:
