@@ -257,8 +257,17 @@ CMakeFiles/Project_3.dir/main.cpp.obj: C:/Users/phill/Desktop/DSA/Project-3/main
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/fstream.tcc \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc \
-  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/utility \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_relops.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algo.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/algorithmfwd.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_heap.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_tempbuf.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_construct.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits \
+  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/vector \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_uninitialized.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_vector.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_bvector.h \
@@ -266,9 +275,7 @@ CMakeFiles/Project_3.dir/main.cpp.obj: C:/Users/phill/Desktop/DSA/Project-3/main
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/random \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath \
   C:/mingw/x86_64-w64-mingw32/include/math.h \
-  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.h \
-  C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/pmmintrin.h \
   C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/emmintrin.h \
@@ -409,6 +416,8 @@ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_construct.h:
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uses_allocator.h:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_function.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/algorithmfwd.h:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/ext/alloc_traits.h:
 
@@ -598,15 +607,23 @@ C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/sstream:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/sstream.tcc:
 
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/algorithm:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_algo.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_heap.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/stl_tempbuf.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h:
+
+C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits:
+
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/cmath:
 
 C:/mingw/x86_64-w64-mingw32/include/math.h:
 
-C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/limits:
-
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/random.h:
-
-C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/bits/uniform_int_dist.h:
 
 C:/mingw/lib/gcc/x86_64-w64-mingw32/7.3.0/include/c++/x86_64-w64-mingw32/bits/opt_random.h:
 

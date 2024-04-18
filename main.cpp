@@ -120,8 +120,8 @@ int main() {
                     }
                     else{
                         static default_random_engine engine(static_cast<unsigned int>(time(nullptr)));
-                        uniform_int_distribution<size_t>uniformIntDistribution(0, songList.size()-1);
-                        int randomsongs= uniformIntDistribution(engine);
+                        uniform_int_distribution<size_t>songdistribution(0, songList.size()-1);
+                        int randomsongs=songdistribution(engine);
                         const Song& randomsong= songList[randomsongs];
                         cout << "Random Song: " << randomsong.isrc << endl;
                     }
