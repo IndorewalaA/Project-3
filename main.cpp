@@ -88,18 +88,21 @@ int main() {
         cin >> temp;
         try {
             menuOption = stoi(temp);
+            //error= false;
         }
         catch(...) {
             cout << "Error! Not a valid number!" << endl;
-            error = true;
+            //error = true;
 
         }
-        if (!error) {
             switch(menuOption){
                 case 0:
                     runMenu= false;
                     break;
                 case 1:
+                    cout<< "Filter Information feature has not been selected yet."<<endl;
+                    break;
+                case 2:
                     if(songList.empty()){
                         cout<<"No songs available to display"<<endl;
                     }else{
@@ -115,9 +118,6 @@ int main() {
                 cout << "Enter a number between 0 and 2!" << endl;
                 break;
             }
-
-        }
-
     }
     return 0;
 }
