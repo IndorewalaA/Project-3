@@ -10,9 +10,9 @@
 using namespace std;
 
 template<typename  T, typename Compare>
-void sorting_part(vector<T>& arr, int left, int right, Compare comp);
+void quick_part(vector<T>& arr, int left, int right, Compare T::*songPtr);
 
 template<typename  T, typename Compare>
-int sorting_again(vector<T>& arr, int left, int right, Compare comp);
+int quick_again(vector<T>& arr, int left, int right, Compare T::*songPtr);
 
 #endif //PROJECT_3_SORTINGSSONGS_H
