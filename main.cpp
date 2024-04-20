@@ -75,10 +75,9 @@ int main() {
     bool runMenu = true;
     bool runMenu2 = true;
     bool error;
-    int menuOption = -1;
-    int subOption = -1;
     cout << "Welcome to the Song Search Filter!" << endl;
     while (runMenu) {
+        int menuOption = -1;
         cout << endl;
         cout << "Select an action:" << endl;
         cout << "0. Exit Program" << endl;
@@ -106,6 +105,7 @@ int main() {
         else if (menuOption == 1) {
             while (runMenu2)
             {
+                int subOption = -1;
                 string temp2;
                 cout << endl;
                 cout << "Filter Information" << endl;
@@ -124,18 +124,17 @@ int main() {
                 cout << "10. Tempo" << endl;
                 cout << "11. Valence" << endl;
                 cin >> temp2;
-                try
-                {
+                try {
                     subOption = stoi(temp2);
                 }
-                catch (...)
-                {
+                catch (...) {
                     cout << "Error! Not a valid number!" << endl;
                     error = true;
                 }
+                error = false;
                 if (!error)
                 {
-                    if ((subOption > 11) || (subOption < 0))
+                    if (((subOption > 11) || (subOption < 0)) && (subOption != -1))
                     {
                         cout << "Enter a number between 0 and 11!" << endl;
                     }
