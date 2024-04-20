@@ -108,21 +108,13 @@ int main() {
                 int subOption = -1;
                 string temp2;
                 cout << endl;
-                cout << "Filter Information" << endl;
-                cout << "__________________" << endl;
+                cout << "                     Filter Information                     " << endl;
+                cout << "____________________________________________________________" << endl;
                 cout << "Select a category to learn more about it's filter!" << endl;
-                cout << "0. Back" << endl;
-                cout << "1. ISRC" << endl;
-                cout << "2. Acousticness" << endl;
-                cout << "3. Danceability" << endl;
-                cout << "4. Duration" << endl;
-                cout << "5. Energy" << endl;
-                cout << "6. Instrumentalness" << endl;
-                cout << "7. Liveness" << endl;
-                cout << "8. Loudness" << endl;
-                cout << "9. Speechiness" << endl;
-                cout << "10. Tempo" << endl;
-                cout << "11. Valence" << endl;
+                cout << "0. Back               1. ISRC               2. Acousticness" << endl;
+                cout << "3. Danceability       4. Duration           5. Energy" << endl;
+                cout << "6. Instrumentalness   7. Liveness           8. Loudness" << endl;
+                cout << "9. Speechiness        10. Tempo             11. Valence" << endl;
                 cin >> temp2;
                 try {
                     subOption = stoi(temp2);
