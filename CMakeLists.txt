@@ -5,5 +5,4 @@ set(CMAKE_CXX_STANDARD 14)
 
 add_executable(Project_3
         main.cpp
-        SortingSSongs.cpp
         SortingSSongs.h)
