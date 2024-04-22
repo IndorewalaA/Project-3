@@ -157,11 +157,6 @@ CMakeFiles/Project_3.dir/main.cpp.obj: C:/Users/bluea/OneDrive/Documents/GitHub/
   C:/mingw32/include/c++/13.1.0/limits \
   C:/mingw32/include/c++/13.1.0/ctime \
   C:/mingw32/include/c++/13.1.0/bits/parse_numbers.h \
-  C:/Users/bluea/OneDrive/Documents/GitHub/Project-3/SortingSSongs.h \
-  C:/mingw32/include/c++/13.1.0/functional \
-  C:/mingw32/include/c++/13.1.0/tuple \
-  C:/mingw32/include/c++/13.1.0/bits/uses_allocator.h \
-  C:/mingw32/include/c++/13.1.0/bits/std_function.h \
   C:/mingw32/include/c++/13.1.0/iomanip \
   C:/mingw32/include/c++/13.1.0/locale \
   C:/mingw32/include/c++/13.1.0/bits/locale_facets_nonio.h \
@@ -169,7 +164,12 @@ CMakeFiles/Project_3.dir/main.cpp.obj: C:/Users/bluea/OneDrive/Documents/GitHub/
   C:/mingw32/include/c++/13.1.0/i686-w64-mingw32/bits/messages_members.h \
   C:/mingw32/include/c++/13.1.0/bits/locale_facets_nonio.tcc \
   C:/mingw32/include/c++/13.1.0/bits/locale_conv.h \
-  C:/mingw32/include/c++/13.1.0/bits/quoted_string.h
+  C:/mingw32/include/c++/13.1.0/bits/quoted_string.h \
+  C:/Users/bluea/OneDrive/Documents/GitHub/Project-3/SortingSSongs.h \
+  C:/mingw32/include/c++/13.1.0/functional \
+  C:/mingw32/include/c++/13.1.0/tuple \
+  C:/mingw32/include/c++/13.1.0/bits/uses_allocator.h \
+  C:/mingw32/include/c++/13.1.0/bits/std_function.h
 
 
 C:/mingw32/include/c++/13.1.0/i686-w64-mingw32/bits/c++config.h:
@@ -496,12 +496,6 @@ C:/mingw32/include/c++/13.1.0/ctime:
 
 C:/mingw32/i686-w64-mingw32/include/stdint.h:
 
-C:/mingw32/include/c++/13.1.0/functional:
-
-C:/mingw32/include/c++/13.1.0/tuple:
-
-C:/mingw32/include/c++/13.1.0/bits/uses_allocator.h:
-
 C:/mingw32/include/c++/13.1.0/iomanip:
 
 C:/mingw32/include/c++/13.1.0/locale:
@@ -509,3 +503,9 @@ C:/mingw32/include/c++/13.1.0/locale:
 C:/mingw32/include/c++/13.1.0/bits/locale_facets_nonio.h:
 
 C:/mingw32/include/c++/13.1.0/bits/locale_conv.h:
+
+C:/mingw32/include/c++/13.1.0/functional:
+
+C:/mingw32/include/c++/13.1.0/tuple:
+
+C:/mingw32/include/c++/13.1.0/bits/uses_allocator.h:

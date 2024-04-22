@@ -979,8 +979,8 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << "Error! Enter a valid number!" << endl;
+                                        //cout << endl;
                                         error = true;
                                     }
                                     if (!error) {
