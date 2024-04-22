@@ -1,15 +1,16 @@
+// reset CMAKE cache (main menu>>file>>invalidate caches) if it doesn't run
+// referenced from lecture slides, discussion slides, and OH w/ TAs
+// created by abdul, alexis, and helen
 #include <iostream>
 #include <fstream>
 #include <sstream>
 #include <string>
 #include <vector>
 #include <chrono>
-#include "SortingSSongs.h"
-#include <iostream>
 #include <iomanip>
-
-using namespace std::chrono;
+#include "SortingSSongs.h"
 using namespace std;
+using namespace chrono;
 
 struct Song
 {
@@ -156,20 +157,20 @@ int main() {
         cout << "Select an action:" << endl;
         cout << "0. Exit Program" << endl;
         cout << "1. Filter Information" << endl;
-        cout << "2. Search" << endl;
+        cout << "2. Search Audio Features" << endl;
         string temp;
         cin >> temp;
         try {
             menuOption = stoi(temp);
         }
         catch(...) {
-            cout << "Error! Not a valid number!" << endl;
+            //cout << "Error! Not a valid number!" << endl;
             error = true;
 
         }
         if (!error) {
             if ((menuOption > 2) || (menuOption < 0)) {
-                cout << "Enter a number between 0 and 2!" << endl;
+                cout << endl << "Invalid! Enter a number between 0 and 11!" << endl;
             }
         }
         error = false;
@@ -182,7 +183,8 @@ int main() {
             {
                 int menuOption2 = -1;
                 string temp2;
-                cout << "                     Filter Information                     " << endl;
+                // prints out all menu information the user wants to know abt
+                cout << endl << "                     Filter Information                     " << endl;
                 cout << "____________________________________________________________" << endl;
                 cout << "Select a category to learn more about it's filter!" << endl;
                 cout << "0. Back               1. ISRC               2. Acousticness" << endl;
@@ -194,111 +196,111 @@ int main() {
                     menuOption2 = stoi(temp2);
                 }
                 catch (...) {
-                    cout << "Error! Not a valid number!" << endl;
+                    //cout << "Error! Not a valid number!" << endl;
                     error = true;
                 }
                 error = false;
-                if (((menuOption2 > 11) || (menuOption2 < 0)) && (menuOption2 != -1))
+                if (((menuOption2 > 11) || (menuOption2 < 0)) && (menuOption2 != -1))   // if input is outside menu range, then its invalid
                 {
-                    cout << "Enter a number between 0 and 11!" << endl;
+                    cout << endl << "Invalid! Enter a number between 0 and 11!" << endl;
                 }
                 else
                 {
                     if (menuOption2 == 0)
                     {
-                        runMenu2 = false;
-                        runMenu = true;
+                        //runMenu2 = false;
+                        //runMenu = true;
+                        break;
                     }
                     else if (menuOption2 == 1)
                     {
-                        cout << "ISRC" << endl;
+                        cout << endl << "ISRC" << endl;
                         cout << "__________________" << endl;
-                        cout << "International Standard Recording Code. You can find the information about" << endl
-                             << "the particular song by searching for the ISRC code on BeatPort.com." << endl;
+                        cout << "aka International Standard Recording Code. Information about the particular\n"
+                                "song can be found by searching for the ISRC code on BeatPort.com." << endl;
                     }
                     else if (menuOption2 == 2)
                     {
-                        cout << "Acousticness" << endl;
+                        cout << endl << "Acousticness" << endl;
                         cout << "__________________" << endl;
-                        cout << "A confidence measure of how acoustic a particular song is. A higher value" << endl
-                             << "indicates a higher confidence that the song is acoustic." << endl;
-                        cout << "Range: 0 to 1" << endl;
+                        cout << "A confidence measure of how acoustic a particular song is. A higher value\n"
+                                "indicates a higher confidence that the song is acoustic." << endl;
+                        cout << "(ranges from 0 to 1)" << endl;
                     }
                     else if (menuOption2 == 3)
                     {
-                        cout << "Danceability" << endl;
+                        cout << endl << "Danceability" << endl;
                         cout << "__________________" << endl;
-                        cout << "A measure of how danceable a particular song is, based off various musical" << endl
-                             << "elements such as tempo, rhythm stability, and beat strength. A higher value" << endl
-                             << "indicates that the song is more danceable." << endl;
-                        cout << "Range: 0 to 1" << endl;
+                        cout << "A measure of how danceable a particular song is, based off various musical\n"
+                                "elements such as tempo, rhythm stability, and beat strength. A higher value\n"
+                                "indicates that the song is more danceable." << endl;
+                        cout << "(ranges from 0 to 1)" << endl;
                     }
                     else if (menuOption2 == 4)
                     {
-                        cout << "Duration" << endl;
+                        cout << endl << "Duration" << endl;
                         cout << "__________________" << endl;
-                        cout << "The duration of the song in minutes and seconds." << endl;
+                        cout << "The duration of the song in milliseconds." << endl;
                     }
                     else if (menuOption2 == 5)
                     {
-                        cout << "Energy" << endl;
+                        cout << endl << "Energy" << endl;
                         cout << "__________________" << endl;
-                        cout << "A measure of how intense a particular song is. More energetic songs are" << endl
-                             << "usually faster, louder, or noisier." << endl;
-                        cout << "Range: 0 to 1" << endl;
+                        cout << "A measure of how intense a particular song is. More energetic songs are\n"
+                                "usually faster, louder, or noisier." << endl;
+                        cout << "(ranges from 0 to 1)" << endl;
                     }
                     else if (menuOption2 == 6)
                     {
-                        cout << "Instrumentalness" << endl;
+                        cout << endl << "Instrumentalness" << endl;
                         cout << "__________________" << endl;
-                        cout << "A confidence measure of whether a particular song contains vocals. Values" << endl
-                             << "closer to 1 have a higher likelihood of being instrumental." << endl;
-                        cout << "Range: 0 to 1" << endl;
+                        cout << "A confidence measure of whether a particular song contains vocals. Values\n"
+                                "closer to 1 have a higher likelihood of being instrumental." << endl;
+                        cout << "(ranges from 0 to 1)" << endl;
                     }
                     else if (menuOption2 == 7)
                     {
-                        cout << "Liveness" << endl;
+                        cout << endl << "Liveness" << endl;
                         cout << "__________________" << endl;
-                        cout << "A confidence measure of whether an audience is present in a particular song." << endl
-                             << "Used to indicate whether the song was performed live in the recording. A" << endl
-                             << "value above 0.8 indicates a strong likelihood that the song was recorded live."
-                             << endl;
-                        cout << "Range: 0 to 1" << endl;
+                        cout << "A confidence measure of whether an audience is present in a particular song.\n"
+                                "Used to indicate whether the song was performed live in the recording. A\n"
+                                "value above 0.8 indicates a strong likelihood that the song was recorded live." << endl;
+                        cout << "(ranges from 0 to 1)" << endl;
                     }
                     else if (menuOption2 == 8)
                     {
-                        cout << "Loudness" << endl;
+                        cout << endl << "Loudness" << endl;
                         cout << "__________________" << endl;
-                        cout << "A measure of how loud a particular song is, measured in decibels (dB). The" << endl
-                             << "value is an average of the entire song." << endl;
-                        cout << "Typical range: -60 to 0." << endl;
+                        cout << "A measure of how loud a particular song is, measured in decibels (dB). The\n"
+                                "value is an average of the entire song." << endl;
+                        cout << "(typical range from -60 to 0)" << endl;
                     }
                     else if (menuOption2 == 9)
                     {
-                        cout << "Speechiness" << endl;
+                        cout << endl << "Speechiness" << endl;
                         cout << "__________________" << endl;
-                        cout << "A measure of how much a particular audio track is comprised of spoken words." << endl
-                             << "Values between 0 and 0.33 are most likely mostly music. Values between 0.33" << endl
-                             << "and 0.66 are most likely songs with verbal lyrics. Values between 0.66 and" << endl
-                             << "1.00 are most likely not musical tracks." << endl;
-                        cout << "Range: 0 to 1" << endl;
+                        cout << "A measure of how much a particular audio track is comprised of spoken words.\n"
+                                "Values between 0 and 0.33 are most likely mostly music. Values between 0.33\n"
+                                "and 0.66 are most likely songs with verbal lyrics. Values between 0.66 and\n"
+                                "1.00 are most likely not musical tracks." << endl;
+                        cout << "(ranges from 0 to 1)" << endl;
                     }
                     else if (menuOption2 == 10)
                     {
-                        cout << "Tempo" << endl;
+                        cout << endl << "Tempo" << endl;
                         cout << "__________________" << endl;
-                        cout << "The overall estimated tempo of a track in beats per minute (BPM). Higher" << endl
-                             << "values are likely faster paced songs." << endl;
-                        cout << "Range: 0 to 250" << endl;
+                        cout << "The overall estimated tempo of a track in beats per minute (BPM). Higher\n"
+                                "values are likely faster paced songs." << endl;
+                        cout << "(ranges from 0 to 250)" << endl;
                     }
                     else if (menuOption2 == 11)
                     {
-                        cout << "Valence" << endl;
+                        cout << endl << "Valence" << endl;
                         cout << "__________________" << endl;
-                        cout << "A measure of how much a particular song is likely to elicit positive" << endl
-                             << "emotions. Higher values are likely songs that are happy, cheerful, and" << endl
-                             << "uplifting, whereas lower values are sadder, more depressing, or angry." << endl;
-                        cout << "Range: 0 to 1" << endl;
+                        cout << "A measure of how much a particular song is likely to elicit positive\n"
+                                "emotions. Higher values are likely songs that are happy, cheerful, and\n"
+                                "uplifting, whereas lower values are sadder, more depressing, or angry." << endl;
+                        cout << "(ranges from 0 to 1)" << endl;
                     }
                 }
             }
@@ -309,7 +311,7 @@ int main() {
 
                 int menuOption3 = -1;
                 string temp3;
-                cout << "                        Track Search                        " << endl;
+                cout << endl << "                       Audio Features                       " << endl;
                 cout << "____________________________________________________________" << endl;
                 cout << "Select a category to filter by:" << endl;
                 cout << "0. Back               1. Acousticness       2. Danceability" << endl;
@@ -321,18 +323,19 @@ int main() {
                     menuOption3 = stoi(temp3);
                 }
                 catch (...) {
-                    cout << "Error! Not a valid number!" << endl;
+                    //cout << "Error! Not a valid number!" << endl;
                     error = true;
                 }
                 error = false;
                 if (((menuOption3 > 10) || (menuOption3 < 0)) && (menuOption3 != -1))
                 {
-                    cout << "Enter a number between 0 and 10!" << endl;
+                    cout << endl << "Invalid! Enter a number between 0 and 10!" << endl;
                 }
                 else {
                     if (menuOption3 == 0) {
-                        runMenu3 = false;
-                        runMenu = true;
+                        //runMenu3 = false;
+                        //runMenu = true;
+                        break;
                     }
                     else {
                         string sortingAlgorithm;
@@ -341,13 +344,13 @@ int main() {
                         if (menuOption3 == 1) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by acousticness!" << endl;
+                                cout << endl <<"You chose acousticness!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between 0 and 1):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between 0 and 1):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -357,8 +360,7 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -376,11 +378,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Acousticness  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Acousticness  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.acousticness << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -394,37 +396,36 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Acousticness  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Acousticness  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.acousticness << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;
                                 }
                             }
                         }
                         else if (menuOption3 == 2) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by danceability!" << endl;
+                                cout << endl << "You chose danceability!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between 0 and 1):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between 0 and 1):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -434,8 +435,7 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << endl << "(Invalid! Enter a number within range!)!" << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -453,11 +453,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Danceability  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Danceability  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.danceability << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -471,31 +471,30 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Danceability  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Danceability  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.danceability << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;
                                 }
                             }
                         }
                         else if (menuOption3 == 3) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by duration!" << endl;
+                                cout << endl << "You chose duration!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
@@ -511,12 +510,12 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        // cout << endl << "(Invalid! Enter a number within range!)!" << endl;
                                         error = true;
                                     }
                                     if (!error) {
-                                        if (min >= 0 && max <= 10000000) {
+                                        // min 3000
+                                        if (min >= 3000 && max <= 10000000) {
                                             vector<Song> newSongList = songList;
                                             if (sortingAlgorithm == "quicksort") {
                                                 vector<Song> subarr;
@@ -530,7 +529,7 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(MM:SS:MM)" << endl;
+                                                cout << "ISRC Code  |  Length(MM:SS:MM)" << endl;
                                                 for (auto ele : subarr) {
                                                     int ms = ele.duration;
                                                     int totalSeconds = ms / 1000;
@@ -542,7 +541,7 @@ int main() {
                                                               << std::setfill('0') << std::setw(2) << second << ":"
                                                               << std::setfill('0') << std::setw(3) << millisecond << std::endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -556,7 +555,7 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Danceability  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Danceability  " << endl;
                                                 for (auto ele : subarr) {
                                                     int ms = ele.duration;
                                                     int totalSeconds = ms / 1000;
@@ -568,33 +567,31 @@ int main() {
                                                               << std::setfill('0') << std::setw(2) << second << ":"
                                                               << std::setfill('0') << std::setw(3) << millisecond << std::endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 10000000." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range (from 3000 to 10000000)!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
-                                }
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;                                }
                             }
                         }
                         else if (menuOption3 == 4) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by energy!" << endl;
+                                cout << endl << "You chose energy!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between 0 and 1):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between 0 and 1):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -604,8 +601,8 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << "Error! Enter a valid number!" << endl;
+                                        //cout << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -623,11 +620,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Energy  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Energy  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.energy << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -641,37 +638,35 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Energy  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Energy  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.energy << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
-                                }
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;                                }
                             }
                         }
                         else if (menuOption3 == 5) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by energy!" << endl;
+                                cout << endl << "You chose instrumentalness!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between 0 and 1):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between 0 and 1):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -681,8 +676,8 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << "Error! Enter a valid number!" << endl;
+                                        //cout << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -700,11 +695,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Instrumentalness  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Instrumentalness  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.instrumentality << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -718,31 +713,29 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Instrumentalness  " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Instrumentalness  " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.instrumentality << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
-                                }
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;                                }
                             }
                         }
                         else if (menuOption3 == 6) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by energy!" << endl;
+                                cout << endl << "You chose liveess!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
@@ -758,8 +751,8 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << "Error! Enter a valid number!" << endl;
+                                        //cout << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -777,11 +770,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Liveness " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Liveness " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.livelihood << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -795,37 +788,36 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Liveness" << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Liveness" << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.livelihood << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;
                                 }
                             }
                         }
                         else if (menuOption3 == 7) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by energy!" << endl;
+                                cout << endl << "You chose loudness!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between -60 and 0):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between -60 and 0):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -835,8 +827,8 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << "Error! Enter a valid number!" << endl;
+                                        //cout << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -854,11 +846,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Loudness(dB)" << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Loudness(dB)" << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.loudness << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -872,37 +864,36 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Loudness(dB)" << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Loudness(dB)" << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.loudness << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between -60 and 0." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;
                                 }
                             }
                         }
                         else if (menuOption3 == 8) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by energy!" << endl;
+                                cout << endl << "You chose speechiness!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between 0 and 1):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between 0 and 1):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -912,8 +903,8 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << "Error! Enter a valid number!" << endl;
+                                        //cout << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -931,11 +922,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Speechiness " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Speechiness " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.speechiness << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -949,37 +940,36 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Speechiness" << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Speechiness" << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.speechiness << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;
                                 }
                             }
                         }
                         else if (menuOption3 == 9) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by energy!" << endl;
+                                cout << endl << "You chose tempo!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between 0 and 1200):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between 0 and 1200):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -1008,11 +998,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Tempo(BPM)" << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Tempo(BPM)" << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(1) << ele.tempo << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -1026,37 +1016,36 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Tempo(BPM)" << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Tempo(BPM)" << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.tempo << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;
                                 }
                             }
                         }
                         else if (menuOption3 == 10) {
                             while (runMenu4) {
                                 bool error = false;
-                                cout << "Sorting and searching by energy!" << endl;
+                                cout << endl << "You chose valence!" << endl;       // Sorting and searching by {user input}
                                 cout << "What sorting algorithm would you like to use? Enter either 'merge' or 'quicksort'." << endl;
                                 cin >> sortingAlgorithm;
                                 if (sortingAlgorithm == "merge" || sortingAlgorithm == "quicksort") {
                                     string temp, temp2;
                                     double min, max;
-                                    cout << "Enter the minimum and maximum values you would like displayed (between 0 and 1):" << endl;
+                                    cout << "Enter the minimum and maximum values within range (between 0 and 1):" << endl;
                                     cout << "Minimum:";
                                     cin >> temp;
                                     cout << "Maximum:";
@@ -1066,8 +1055,8 @@ int main() {
                                         max = stod(temp2);
                                     }
                                     catch(...) {
-                                        cout << "Error! Enter a valid number!" << endl;
-                                        cout << endl;
+                                        //cout << "Error! Enter a valid number!" << endl;
+                                        //cout << endl;
                                         error = true;
                                     }
                                     if (!error) {
@@ -1085,11 +1074,11 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Valence " << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Valence " << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.valence << endl;
                                                 }
-                                                cout << "Quicksort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Quicksort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             else if (sortingAlgorithm == "merge") {
                                                 vector<Song> subarr;
@@ -1103,24 +1092,23 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code     Length(ms)    Valence" << endl;
+                                                cout << "ISRC Code  |  Length(ms)  |  Valence" << endl;
                                                 for (auto ele : subarr) {
                                                     cout << ele.isrc << "  " << ele.duration << "        " << setprecision(6) << ele.valence << endl;
                                                 }
-                                                cout << "Merge sort took " << duration.count() << " miliseconds!" << endl;
+                                                cout << "Merge sort took " << duration.count() << " milliseconds!" << endl;
                                             }
                                             runMenu4 = false;
                                             runMenu3 = true;
                                         }
                                         else
                                         {
-                                            cout << "Error! enter a number between 0 and 1." << endl;
-                                            cout << endl;
+                                            cout << endl << "(Invalid! Enter a number within range!)" << endl;
                                         }
                                     }
                                 }
                                 else {
-                                    cout << "Error! Enter either 'merge' or 'quicksort'." << endl;
+                                    cout << endl <<  "(Invalid! Enter 'merge' or 'quicksort')" << endl;
                                 }
                             }
                         }

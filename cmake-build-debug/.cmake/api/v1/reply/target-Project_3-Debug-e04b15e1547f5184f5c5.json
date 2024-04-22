@@ -39,6 +39,9 @@
 			[
 				{
 					"fragment" : "-g -fdiagnostics-color=always"
+				},
+				{
+					"fragment" : "-std=gnu++14"
 				}
 			],
 			"language" : "CXX",
@@ -52,8 +55,7 @@
 			},
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		}
 	],
@@ -90,15 +92,14 @@
 			"name" : "Source Files",
 			"sourceIndexes" : 
 			[
-				0,
-				1
+				0
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				2
+				1
 			]
 		}
 	],
@@ -108,12 +109,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "main.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "SortingSSongs.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
