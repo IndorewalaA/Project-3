@@ -555,7 +555,7 @@ int main() {
                                                     }
                                                 }
                                                 cout << subarr.size() << " Results!" << endl;
-                                                cout << "ISRC Code  |  Length(ms)  |  Danceability  " << endl;
+                                                cout << "ISRC Code  |  Length(MM:SS:MM)" << endl;
                                                 for (auto ele : subarr) {
                                                     int ms = ele.duration;
                                                     int totalSeconds = ms / 1000;
