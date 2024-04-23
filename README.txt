@@ -1,0 +1,1 @@
+Hi!! This is my group's Project 3 submission! Simply cloning it should do the trick, as this worked on my partners' and I's versions. Make sure that there is an 'updated_audio_features.csv' file inside the cmake-build-debug folder. We ran the code on CLion. That should be all :)
